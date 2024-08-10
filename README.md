@@ -17,7 +17,7 @@ The shape finding algorithm implements a simple depth first search for shapes.
 
 ```
 git clone https://github.com/neilSchroeder/find-shapes.git
-cd find_shapes
+cd find-shapes
 conda env create -f environment.yml
 conda activate find_shapes
 ```
@@ -26,7 +26,7 @@ conda activate find_shapes
 
 ```
 python run_shape_find.py --input-file data/data_small.txt
-python run_shape_file.py --input-file data/data_large.txt
+python run_shape_find.py --input-file data/data_large.txt
 ```
 
 ## Tests
