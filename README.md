@@ -12,7 +12,6 @@ coding.
 ## Features
 
 The shape finding algorithm implements a simple depth first search for shapes.
-For the sake of speed, the algorithm is wrapped by Numba.
 
 ## Setup/Installation
 
