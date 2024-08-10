@@ -16,7 +16,7 @@ The shape finding algorithm implements a simple depth first search for shapes.
 ## Setup/Installation
 
 ```
-git clone https://github.com/nschroed/find_shapes.git
+git clone https://github.com/neilSchroeder/find-shapes.git
 cd find_shapes
 conda env create -f environment.yml
 conda activate find_shapes
