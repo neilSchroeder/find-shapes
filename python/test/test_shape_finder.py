@@ -51,6 +51,16 @@ class TestFindShapes(unittest.TestCase):
         self.assertEqual(num_shapes, 1)
         self.assertEqual(len(shapes), 1)
         self.assertEqual(len(shapes[0]), 8)
+    
+    def test_diagonal_shape(self):
+        image = np.array([
+            [1, 0, 1],
+            [0, 1, 0],
+            [1, 0, 1]
+        ])
+        num_shapes, shapes = find_shapes(image)
+        self.assertEqual(num_shapes, 5)
+        self.assertEqual(len(shapes), 5)
 
 if __name__ == '__main__':
     unittest.main()

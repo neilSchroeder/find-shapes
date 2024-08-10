@@ -32,4 +32,4 @@ python run_shape_find.py --input-file data/data_large.txt
 ## Tests
 
 ### Run unit tests
-`python -m unittest test_shape_finder.py`
+`python -m unittest python/test/test_shape_finder.py`
