@@ -1,6 +1,10 @@
+"""Unit tests for the find_shapes function in shape_finder.py."""
 import unittest
+
 import numpy as np
+
 from python.shape_finder import find_shapes
+
 
 class TestFindShapes(unittest.TestCase):
 

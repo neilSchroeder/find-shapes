@@ -1,7 +1,6 @@
 """Function for finding shapes in an image."""
 
 import numpy as np
-import numba
 
 
 def find_shapes(image):
@@ -17,22 +16,29 @@ def find_shapes(image):
         A tuple of the number of shapes and a list of shapes.
         Each shape is a list of (x, y) coordinates.
     """
+    min_x, min_y = 0, 0
+    max_x, max_y = image.shape[0], image.shape[1]
+    cell_shifts = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
     def _is_valid(x, y):
-        return 0 <= x < image.shape[0] and 0 <= y < image.shape[1]
+        """Private function to check if a cell is valid."""
+        return min_x <= x < max_x and min_y <= y < max_y
 
     def _dfs(x, y, shape):
+        """Private function to perform depth-first search."""
         if not _is_valid(x, y) or visited[x, y] or image[x, y] == 0:
             return
         visited[x, y] = True
         shape.append((x, y))
-        for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+        for dx, dy in cell_shifts:
             _dfs(x + dx, y + dy, shape)
 
     visited = np.zeros_like(image, dtype=bool)
     shapes = []
+    # iterate over all cells
     for x in range(image.shape[0]):
         for y in range(image.shape[1]):
+            # skip zeros and already visited cells
             if not visited[x, y] and image[x, y] == 1:
                 shape = []
                 _dfs(x, y, shape)
