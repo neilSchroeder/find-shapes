@@ -15,6 +15,10 @@ The shape finding algorithm implements a simple depth first search for shapes.
 
 ## Setup/Installation
 
+This project uses `conda` for version control, specifically `conda 23.7.4` but
+any modern version should do the job. To install `conda`, follow the
+instructions here: [install conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
+
 ```
 git clone https://github.com/neilSchroeder/find-shapes.git
 cd find-shapes
