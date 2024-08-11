@@ -19,6 +19,9 @@ This project uses `conda` for version control, specifically `conda 23.7.4` but
 any modern version should do the job. To install `conda`, follow the
 instructions here: [install conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
+Once installed, use the following command line instructions to set up this
+repo:
+
 ```
 git clone https://github.com/neilSchroeder/find-shapes.git
 cd find-shapes
