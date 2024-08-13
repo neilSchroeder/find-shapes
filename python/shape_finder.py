@@ -41,6 +41,8 @@ def find_shapes(image):
             # skip zeros and already visited cells
             if not visited[x, y] and image[x, y] == 1:
                 shape = []
+                # perform depth-first search
+                # to find all cells connected to the current cell
                 _dfs(x, y, shape)
                 shapes.append(shape)
 
